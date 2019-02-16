@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Echanges devises</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Echanegs devises</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Achats</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Ventes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Clients</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Configurations
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Devises</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+<div class="container-fluid container-pading-top">
+
+    <div class="row">
+
+        <div class="col-lg-2">
+            <div class="card bg-light">
+                <div class="card-header"><strong>15/02/2019</strong></div>
+                <div class="card-body">
+                    <h5 class="card-title">1 Euro = 2 Dinar</h5>
+                    <h5 class="card-title">1 Dollar = 2 Dinar</h5>
+                    <h5 class="card-title">1 Yen = 2 Dinar</h5>
+                </div>
+            </div>
+            <hr/>
+
+        </div>
+        <div class="col-lg-10">
+            <div class="card bg-light">
+                <div class="card-header"><strong>Conversion</strong></div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-1">
+                                <label for="montant">Montant</label>
+                                <input type="number" class="form-control" id="montant" placeholder="Montant">
+                            </div>
+                            <div class="form-group col-md-1">
+                                <label for="source">De</label>
+                                <select class="custom-select" id="source">
+                                    <option selected>Devise</option>
+                                    <option value="1">Euro</option>
+                                    <option value="2">US-dollar</option>
+                                    <option value="3">Dinar</option>
+                                </select>
+                            </div>
+                            <div class="col-md-1">
+                                <label>&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+                                <button type="button" class="btn btn-warning">Inverser</button>
+                            </div>
+                            <div class="form-group col-md-1">
+                                <label for="cible">À</label>
+                                <select class="custom-select" id="cible">
+                                    <option selected>Devise</option>
+                                    <option value="1">Euro</option>
+                                    <option value="2">US-dollar</option>
+                                    <option value="3">Dinar</option>
+                                </select>
+                            </div>
+                            <div class="col-md-1">
+                                <label>&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+                                <a href="#" class="btn btn-primary">Convertir</a>
+                            </div>
+                            <div class="col-md-2">
+                                <label>&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+                                <h5 style="padding-top: 5px"> 300 Euro = 400 dinars</h5>
+                            </div>
+                            <div class="col-md-2">
+                                <label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+                                <button type="button" class="btn btn-primary btn-lg">Vente</button>
+                                <button type="button" class="btn btn-secondary btn-lg">Achat</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <footer class="card-text">cours d'echange 1Euro = 3Dinar (Dernière mise à jour : 2019-02-14 16:19)</footer>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-2">
+            <div class="card bg-light">
+                <div class="card-header"><strong>Configuration 15/02/2019</strong></div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group row">
+                            <label  class="col-md-4 col-form-label" for="deviseEuro">Euro</label>
+                            <div class="col-md-8">
+                                <input type="number" class="form-control" min="0" id="deviseEuro" placeholder="cours Euro">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label  class="col-md-4 col-form-label" for="deviseDollar">Dollar</label>
+                            <div class="col-md-8">
+                                <input type="number" class="form-control" min="0" id="deviseDollar" placeholder="cours Dollar">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-10">
+            <div class="card bg-light">
+                <div class="card-header"><strong>Echange - Vente</strong></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="recherchePersonne">Recherche de client</label>
+                                        <input type="text" class="form-control" id="recherchePersonne" placeholder="Recherche de client">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Password</label>
+                                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAddress">Address</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAddress2">Address 2</label>
+                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputCity">City</label>
+                                        <input type="text" class="form-control" id="inputCity">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="inputState">State</label>
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Choose...</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputZip">Zip</label>
+                                        <input type="text" class="form-control" id="inputZip">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Check me out
+                                        </label>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h3 class="text-center">300 Euros</h3>
+                                    <table class="table table-bordered">
+                                        <thead>
+
+                                            <tr>
+                                                <th scope="col">Billets</th>
+                                                <th scope="col">Pieces</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><label class="width-70">100 Euros</label> <input type="number" class="width-50" /></td>
+                                                <td><label class="width-70"> 2 Euros</label> <input type="number" class="width-50"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label class="width-70">50 Euros</label> <input type="number" class="width-50" /></td>
+                                                <td><label class="width-70">2 Euros</label> <input type="number" class="width-50" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label class="width-70">20 Euros</label> <input type="number" class="width-50"/></td>
+                                                <td><label class="width-70">2 Euros</label> <input type="number" class="width-50" /></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><label class="width-70">10 Euros</label> <input type="number" class="width-50" /></td>
+                                                <td><label class="width-70">2 Euros </label><input type="number" class="width-50"/></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><label class="width-70">5 Euros</label> <input type="number" class="width-50" /></td>
+                                                <td><label class="width-70">2 Euros</label> <input type="number" class="width-50" /></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h3 class="text-center">500 Dinars</h3>
+                                    <table class="table table-bordered">
+                                        <thead>
+
+                                        <tr>
+                                            <th scope="col">Billets</th>
+                                            <th scope="col">Pieces</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><label class="width-70">50 Dinars</label> <input type="number" class="width-50" /></td>
+                                            <td><label class="width-70">2 Dinars</label> <input type="number" class="width-50" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label class="width-70">20 Dinars</label> <input type="number" class="width-50"/></td>
+                                            <td><label class="width-70">2 Dinars</label> <input type="number" class="width-50" /></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><label class="width-70">10 Dinars</label> <input type="number" class="width-50" /></td>
+                                            <td><label class="width-70">2 Dinars </label><input type="number" class="width-50"/></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><label class="width-70">5 Dinars</label> <input type="number" class="width-50" /></td>
+                                            <td><label class="width-70">2 Dinars</label> <input type="number" class="width-50" /></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h5>Motif Vente</h5>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio1">Achat de devises auprés d'un voyageur résident</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio2">Achat de devises auprés d'un voyageur non résident</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio3">Achat de devises à titre de rétrocession de l'allocation touristique</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio4">Achat de devises à titre de rétrocession de frais de mission ou de stage</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-success">Valider</button>
+                            <button type="submit" class="btn btn-primary">Enregistrer</button>
+                            <button type="button" class="btn btn-light">Annuler</button>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
